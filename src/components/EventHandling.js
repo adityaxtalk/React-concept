@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { Button } from 'react-bootstrap';
 
 const EventHandling = () => {
     const handleClick = (event) => {
@@ -11,6 +12,7 @@ const EventHandling = () => {
     <>
             <a href='https://www.example.com' onClick={handleClick}>Click Me </a>
             <MultipleEventHandling/>
+            <CustomEventComponent/>
     </>
     
   )
@@ -44,6 +46,35 @@ const MultipleEventHandling = () => {
         </>
      )
 }
+
+
+const CustomEventComponent = () => {
+    useEffect(()=> {
+       const CallBackFunction = (event) => {
+        alert("Custom Event Triggered " + event.details);
+       }
+        
+        window.addEventListener("CustomEvent",  CallBackFunction);
+
+        return () => {
+            window.removeEventListener("CustomEvent", ()=> {
+                console.log("Event Listener removed")
+            });
+        }
+    }, []);
+
+    const HandleClick=() => {
+        const customEvent= new CustomEvent("CustomEvent",{details: "Custom Event Occurred"});
+
+        window.dispatchEvent(customEvent);
+    }
+
+    return (
+ 
+        <Button onClick={HandleClick} variant='outline'>Trigger Custom Event</Button>
+    )
+}
+
 
 const EventDelegation = () => {
    
