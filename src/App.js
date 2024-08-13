@@ -7,7 +7,8 @@ import EventHandling from './components/EventHandling';
 import Controlled from './components/Controlled';
 import UnControlled from './components/UnControlled';
 import Form from './components/Form';
-
+import FormValidation from './components/FormValidation';
+import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
       <Controlled/>
       <UnControlled/>
       <Form/>
+      <FormValidation/>
     </div>
   );
 }

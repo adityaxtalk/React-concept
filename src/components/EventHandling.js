@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Button } from 'react-bootstrap';
+
 
 const EventHandling = () => {
     const handleClick = (event) => {
@@ -71,7 +71,7 @@ const CustomEventComponent = () => {
 
     return (
  
-        <Button onClick={HandleClick} variant='outline'>Trigger Custom Event</Button>
+        <button onClick={HandleClick} variant='outline'>Trigger Custom Event</button>
     )
 }
 
