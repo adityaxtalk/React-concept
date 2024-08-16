@@ -9,6 +9,7 @@ import UnControlled from './components/UnControlled';
 import Form from './components/Form';
 import FormValidation from './components/FormValidation';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Routing from './components/Routing';
 function App() {
   return (
     <div className="App">
@@ -16,10 +17,11 @@ function App() {
       {/* <Props/> */}
       {/* <Class welcome="hello world"/> */}
       {/* <EventHandling/> */}
-      <Controlled/>
+      {/* <Controlled/>
       <UnControlled/>
       <Form/>
-      <FormValidation/>
+      <FormValidation/> */}
+      <Routing/>
     </div>
   );
 }

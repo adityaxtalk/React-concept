@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {  useFormik } from 'formik'
 import * as Yup from "yup";
-
+import { useLocation } from 'react-router-dom';
 
 
 const validationSchema = Yup.object({
@@ -17,6 +17,8 @@ const validationSchema = Yup.object({
   course: Yup.string().required("Course is required"),
   dateOfBirth: Yup.date().required("Date of birth is required")
 });
+
+
 
 const courseLabel = [
   {
@@ -44,6 +46,12 @@ const selectedOptions = courseLabel.map((option) => (
 ));
 
 const FormValidation = () => {
+  const location= useLocation();
+  useEffect(()=> {
+    const temp=location;
+    debugger
+ }, []);
+ 
   const formik= useFormik({
     initialValues: {
       firstName: "",

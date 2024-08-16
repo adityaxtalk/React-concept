@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-
+import React, { useEffect, useState } from 'react'
+import {useLocation} from "react-router-dom"
 const Form = () => {
     const [data, setData] = useState({
         name: "",
@@ -7,6 +7,7 @@ const Form = () => {
         age: 0
     });
 
+    const location= useLocation();
     const [errors, setErrors] = useState({});
     const handleChange = (event) => {
         debugger
@@ -17,6 +18,11 @@ const Form = () => {
         })
     }
 
+    useEffect(()=> {
+       const temp=location;
+       debugger
+    }, []);
+    
     const validate = () => {
          const tempError={};
          if (data.name.trim().length === 0) {
