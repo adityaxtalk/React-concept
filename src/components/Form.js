@@ -18,10 +18,6 @@ const Form = () => {
         })
     }
 
-    useEffect(()=> {
-       const temp=location;
-       debugger
-    }, []);
     
     const validate = () => {
          const tempError={};
