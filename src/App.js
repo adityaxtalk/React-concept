@@ -10,6 +10,7 @@ import Form from './components/Form';
 import FormValidation from './components/FormValidation';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Routing from './components/Routing';
+import Hooks from './components/Hooks';
 function App() {
   return (
     <div className="App">

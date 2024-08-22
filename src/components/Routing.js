@@ -3,6 +3,12 @@ import { BrowserRouter, Routes, Route, useNavigate, Navigate, useParams, useSear
 import Class from "./Class";
 import FormValidation from "./FormValidation";
 import LazyLoading from './LazyLoading';
+import Hooks from './Hooks';
+import Usestate from './hooks/Usestate'
+import Usereducer from './hooks/Usereducer'
+import Useeffect from './hooks/Useeffect'
+import Usecallback from './hooks/Usecallback'
+
 const Home = () => 
     <div>Home</div>
 
@@ -33,7 +39,7 @@ const Routing = () => {
   return (
     <>
     <h1>Routing</h1>
-<BrowserRouter>
+   <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/class' element={<Class/>}/>
@@ -41,6 +47,12 @@ const Routing = () => {
         <Route path="/user/:userId" element={<User/>}/>
         <Route path="/queryParams" element={<SearchParams/>}/>
         <Route path='/lazyloading' element={<LazyLoading/>}/>
+        <Route path="/hooks" element={<Hooks/>}>
+           <Route path='useeffect' element={<Useeffect/>}/>
+           <Route path='usestate' element={<Usestate/>}/>
+           <Route path='usereducer' element={<Usereducer/>}/>
+           <Route path='usecallback' element={<Usecallback/>}/>
+        </Route>
         <Route path='*' element={<Navigate to="/form"/>}/>
         {/* <Route path="/home" element={<Home/>}/> */}
       </Routes>

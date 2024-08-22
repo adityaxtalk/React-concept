@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+.active-class {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+.active-class:hover {
+  color: blue;
+  
+}
