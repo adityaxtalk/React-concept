@@ -11,3 +11,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.panel-light, .panel-dark {
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+
+.panel-light {
+  color: black;
+  background-color: white;
+}
+
+.panel-dark {
+  color: white;
+  background-color: black;
+}
+
+
+.button-light, .button-dark {
+  border: 1px solid #777;
+  padding: 1rem;
+  margin: 1rem 1rem 0;
+
+}
+
+.button-dark {
+  background-color: #222;
+  color: white;
+}
+
+.button-light {
+  color: #222;
+  background-color: white;
+}

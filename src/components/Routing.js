@@ -8,6 +8,7 @@ import Usestate from './hooks/Usestate'
 import Usereducer from './hooks/Usereducer'
 import Useeffect from './hooks/Useeffect'
 import Usecallback from './hooks/Usecallback'
+import Usecontext from './hooks/Usecontext';
 
 const Home = () => 
     <div>Home</div>
@@ -52,6 +53,7 @@ const Routing = () => {
            <Route path='usestate' element={<Usestate/>}/>
            <Route path='usereducer' element={<Usereducer/>}/>
            <Route path='usecallback' element={<Usecallback/>}/>
+           <Route path='usecontext' element={<Usecontext/>}/>
         </Route>
         <Route path='*' element={<Navigate to="/form"/>}/>
         {/* <Route path="/home" element={<Home/>}/> */}
