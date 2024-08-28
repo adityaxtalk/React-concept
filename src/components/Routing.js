@@ -9,6 +9,7 @@ import Usereducer from './hooks/Usereducer'
 import Useeffect from './hooks/Useeffect'
 import Usecallback from './hooks/Usecallback'
 import Usecontext from './hooks/Usecontext';
+import CustomHook from './hooks/CustomHook';
 
 const Home = () => 
     <div>Home</div>
@@ -54,6 +55,7 @@ const Routing = () => {
            <Route path='usereducer' element={<Usereducer/>}/>
            <Route path='usecallback' element={<Usecallback/>}/>
            <Route path='usecontext' element={<Usecontext/>}/>
+           <Route path='customhook' element={<CustomHook/>}/>
         </Route>
         <Route path='*' element={<Navigate to="/form"/>}/>
         {/* <Route path="/home" element={<Home/>}/> */}
