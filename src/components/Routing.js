@@ -10,6 +10,7 @@ import Useeffect from './hooks/Useeffect'
 import Usecallback from './hooks/Usecallback'
 import Usecontext from './hooks/Usecontext';
 import CustomHook from './hooks/CustomHook';
+import ReactRedux from './ReactRedux';
 
 const Home = () => 
     <div>Home</div>
@@ -57,6 +58,7 @@ const Routing = () => {
            <Route path='usecontext' element={<Usecontext/>}/>
            <Route path='customhook' element={<CustomHook/>}/>
         </Route>
+        <Route path='redux' element={<ReactRedux/>}/>
         <Route path='*' element={<Navigate to="/form"/>}/>
         {/* <Route path="/home" element={<Home/>}/> */}
       </Routes>
